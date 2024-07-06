@@ -1,0 +1,19 @@
+name: Upload
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    name: Deploy
+    steps:
+      - uses: actions/checkout@v4
+      - name: Upload
+        run: |
+          aws s3api put-object --endpoint-url https://52ea1a31689ef9942785e9fe708b27a0.r2.cloudflarestorage.com  --bucket data --key stacks.json --body stacks.json
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: 'us-east-1'
