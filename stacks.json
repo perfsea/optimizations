@@ -1,0 +1,54 @@
+{
+    "ssl": {
+        "name": "SSL/TLS",
+        "opt": [
+                "openssl 1.1.1 is one of the more performant versions",
+                "If not using certain functionality boringssl can give better performance",
+                "modern CPU architectures have more SIMD (single instruction multiple data) execution units and can often execute the cryptographic parts of networking much faster"
+        ]
+    },
+    "snappy": {
+        "name": "Snappy",
+        "opt": [
+                "Snappy is more performant when compiled with clang instead of GCC",
+                "Optimized to use SIMD instructions on modern CPU architectures, try upgrading to a newer CPU"
+        ]
+    },
+    "zstd": {
+        "name": "Z Standard",
+        "opt": [
+                "Can be offloaded with Intel's QAT which is on Sapphire rapids or later architectures",
+                "Optimized to use SIMD instructions on modern CPU architectures, try upgrading to a newer CPU"
+        ]
+    },
+    "prometheus": {
+        "name": "Prometheus",
+        "opt": [
+                "Try reducing the scrape_interval to limit overhead"
+        ]
+    },
+    "Envoy": {
+        "name": "Envoy",
+        "opt": [
+                "Can be offloaded with Intel's QAT which is on Sapphire rapids or later architectures"
+        ]
+    },
+    "alloc": {
+        "name": "Allocators",
+        "opt": [
+                "TCmalloc can be used to improve performance on multithreaded allocation workloads by maintaining a per-cpu cache and zoning to prevent fragmentation"
+        ]
+    },
+    "GC": {
+        "name": "Garbage Collection",
+        "opt": [
+                "Using parallel garbage collection reduces overhead"
+        ]
+    },
+    "swapper": {
+        "name": "swapper",
+        "opt": [
+                "server is either under utilized or idling on IO. Either downsize or add more work"
+        ]
+    }
+}
