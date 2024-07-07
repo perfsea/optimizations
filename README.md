@@ -36,20 +36,20 @@ if (
   metricMap.hasOwnProperty("Architectural CPI") &&
   m.value / metricMap["Architectural CPI"] > 0.4
 ) {
-  m.notes =
-    "A large portion of instructions being fetched never get executed. Look for branchy code or binary layout issues";
+  m.notes = "A large portion of instructions being fetched never get executed. Look for branchy code or binary layout issues";
 }
 ...
 ```
 
 ## System Configuration
 Flag problematic system configurations by associating regex with common commands.
-```js
-{
-  cmd: "findmnt",
-  regex: "atime",
-  exists: false,
-  note: "Mounting with atime can improve performance on filesystem heavy workloads by not tracking last accessed dates for files."
-}
+```json
+[
+  {
+    "cmd": "findmnt",
+    "regex": "atime",
+    "exists": false,
+    "note": "Mounting with atime can improve performance on filesystem heavy workloads by not tracking last accessed dates for files."
+  }
 ...
 ```
