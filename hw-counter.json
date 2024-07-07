@@ -1,0 +1,11 @@
+{
+    "ARM": {
+        "N1": {
+            "Microarchitectural": "l1d_cache_refill,l1d_cache,l1i_cache_refill,l1i_cache,l2d_cache_refill,l2d_cache,l1d_tlb_refill,l1d_tlb,l1i_tlb_refill,l1i_tlb,l2d_tlb_refill,l2d_tlb,inst_retired,inst_spec,stall_frontend,stall_backend,cpu_cycles,br_mis_pred_retired,br_retired",
+            "Instruction Mix": "br_immed_spec,br_indirect_spec,inst_spec,crypto_spec,dp_spec,ld_spec,vfp_spec,ase_spec,st_spec"
+        },
+        "N2 or later": {}
+    },
+    "AMD": {},
+    "Intel": {}
+}
