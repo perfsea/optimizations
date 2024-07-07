@@ -13,9 +13,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Upload
         run: |
-          gzip < flamegraph.json | aws s3api put-object --content-type gzip --endpoint-url https://api.perfsea.com  --bucket data --key flamegraph.json
-          gzip < sys-config.json | aws s3api put-object --content-type gzip --endpoint-url https://api.perfsea.com  --bucket data --key sys-config.json
-          gzip < hw-counter.json | aws s3api put-object --content-type gzip --endpoint-url https://api.perfsea.com  --bucket data --key hw-counter.json
+          aws s3api put-object --endpoint-url https://api.perfsea.com  --bucket data --key flamegraph.json --body flamegraph.json
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
