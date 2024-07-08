@@ -3,7 +3,7 @@
     "cmd": "findmnt",
     "notes": [
       {
-        "regex": "(?<!\\w)atime(?!\\w)",
+        "regex": "(?<!\\w)noatime(?!\\w)",
         "exists": false,
         "note": "Mounting with atime can improve performance on filesystem heavy workloads by not tracking last accessed dates for files."
       }
