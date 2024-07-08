@@ -13,9 +13,9 @@ jobs:
       - uses: actions/checkout@v4
       - name: Upload
         run: |
-          gzip flamegraph.json; aws s3api put-object --content-type gzip --endpoint-url https://52ea1a31689ef9942785e9fe708b27a0.r2.cloudflarestorage.com  --bucket data --key flamegraph.json --body flamegraph.json.gz
-          gzip sys-config.json; aws s3api put-object --content-type gzip --endpoint-url https://52ea1a31689ef9942785e9fe708b27a0.r2.cloudflarestorage.com  --bucket data --key sys-config.json --body sys-config.json.gz
-          gzip hw-counter.json; aws s3api put-object --content-type gzip --endpoint-url https://52ea1a31689ef9942785e9fe708b27a0.r2.cloudflarestorage.com  --bucket data --key hw-counter.json --body hw-counter.json.gz
+          aws s3api put-object --content-type gzip --endpoint-url https://52ea1a31689ef9942785e9fe708b27a0.r2.cloudflarestorage.com  --bucket data --key flamegraph.json --body flamegraph.json
+          aws s3api put-object --content-type gzip --endpoint-url https://52ea1a31689ef9942785e9fe708b27a0.r2.cloudflarestorage.com  --bucket data --key sys-config.json --body sys-config.json
+          aws s3api put-object --content-type gzip --endpoint-url https://52ea1a31689ef9942785e9fe708b27a0.r2.cloudflarestorage.com  --bucket data --key hw-counter.json --body hw-counter.json
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
