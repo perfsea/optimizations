@@ -5,7 +5,42 @@
       {
         "regex": "(?<!\\w)noatime(?!\\w)",
         "exists": false,
-        "note": "Mounting with atime can improve performance on filesystem heavy workloads by not tracking last accessed dates for files."
+        "note": "Mounting with noatime can improve performance on filesystem heavy workloads by not tracking last accessed dates for files."
+      },
+      {
+        "regex": "(?<!\\w)discard(?!\\w)",
+        "exists": true,
+        "note": "Mounting with discard can cause intermittent latency spike when TRIM operations occur"
+      }
+    ]
+  },
+  {
+    "cmd": "cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor",
+    "notes": [
+      {
+        "regex": "performance",
+        "exists": true,
+        "note": "Consider setting the Power and Performance policy to 'performance'"
+      }
+    ]
+  },
+  {
+    "cmd": "cat /sys/module/intel_idle/parameters/max_cstate",
+    "notes": [
+      {
+        "regex": "1",
+        "exists": false,
+        "note": "Allowing c-states lower than 1 can cause latency while cpu cores exit an idle state"
+      }
+    ]
+  },
+  {
+    "cmd": "cat /sys/module/processor/parameters/max_cstate",
+    "notes": [
+      {
+        "regex": "1",
+        "exists": false,
+        "note": "Allowing c-states lower than 1 can cause latency while cpu cores exit an idle state"
       }
     ]
   }
