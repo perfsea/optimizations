@@ -47,9 +47,11 @@ Flag problematic system configurations by associating regex with common commands
 [
   {
     "cmd": "findmnt",
-    "regex": "atime",
-    "exists": false,
-    "note": "Mounting with atime can improve performance on filesystem heavy workloads by not tracking last accessed dates for files."
-  }
+    "notes": [
+      {
+        "regex": "atime",
+        "exists": false,
+        "note": "Mounting with atime can improve performance on filesystem heavy workloads by not tracking last accessed dates for files."
+      }
 ...
 ```
