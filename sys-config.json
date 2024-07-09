@@ -30,7 +30,7 @@
       {
         "regex": "1",
         "exists": false,
-        "note": "Allowing c-states lower than 1 can cause latency while cpu cores exit an idle state"
+        "note": "Allowing c-states lower than 1 can cause latency while CPU cores exit an idle state"
       }
     ]
   },
@@ -40,7 +40,37 @@
       {
         "regex": "1",
         "exists": false,
-        "note": "Allowing c-states lower than 1 can cause latency while cpu cores exit an idle state"
+        "note": "Allowing c-states lower than 1 can cause latency while CPU cores exit an idle state"
+      }
+    ]
+  },
+  {
+    "cmd": "cat /etc/audit/rules.d/audit.rules",
+    "notes": [
+      {
+        "regex": "-a never,task",
+        "exists": false,
+        "note": "Disabling syscall auditing can speed up syscall heavy workloads. Disable with '-a never,task'"
+      }
+    ]
+  },
+  {
+    "cmd": "ethtool -c eth0",
+    "notes": [
+      {
+        "regex": "Adaptive RX: off",
+        "exists": true,
+        "note": "Enabling adaptive interrupt coalesce can batch network interrupts. Enable it with 'ethtool -C eth0 adaptive-rx on' and 'ethtool -C eth0 tx-usecs 256'"
+      }
+    ]
+  },
+  {
+    "cmd": "systemctl status irqbalance.service",
+    "notes": [
+      {
+        "regex": "active \\(running\\)",
+        "exists": true,
+        "note": "Disabling irqbalance and instead hard mapping irqs to CPU's can reduce network overhead. Modify in '/proc/irq/<irq_number>/smp_affinity_list'"
       }
     ]
   }
