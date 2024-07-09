@@ -49,9 +49,14 @@ Flag problematic system configurations by associating regex with common commands
     "cmd": "findmnt",
     "notes": [
       {
-        "regex": "atime",
+        "regex": "(?<!\\w)noatime(?!\\w)",
         "exists": false,
-        "note": "Mounting with atime can improve performance on filesystem heavy workloads by not tracking last accessed dates for files."
+        "note": "Mounting with noatime can improve performance on filesystem heavy workloads by not tracking last accessed dates for files."
+      },
+      {
+        "regex": "(?<!\\w)discard(?!\\w)",
+        "exists": true,
+        "note": "Mounting with discard can cause intermittent latency spike when TRIM operations occur"
       }
 ...
 ```
