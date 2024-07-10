@@ -7,6 +7,24 @@
                 "modern CPU architectures have more SIMD (single instruction multiple data) execution units and can often execute the cryptographic parts of networking much faster"
         ]
     },
+    "envoy": {
+        "name": "Envoy",
+        "opt": [
+                "placeholder"
+        ]
+    },
+    "kafka": {
+        "name": "Kafka",
+        "opt": [
+                "placeholder"
+        ]
+    },
+    "tensorflow": {
+        "name": "TensorFlow",
+        "opt": [
+                "Try quantizing your weights to better utilize underlying CPU execution units. Some companies offer tools for converting your models like Intel's neural compressor and oneDNN"
+        ]
+    },
     "snappy": {
         "name": "Snappy",
         "opt": [
