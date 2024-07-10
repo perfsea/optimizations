@@ -28,7 +28,7 @@
     "(deflate|inflate)": {
         "name": "Deflate/Inflate compression",
         "opt": [
-                "most compression benefits from newer CPUs and versions compiled to utilize advanced instruction sets",
+                "most compression benefits from newer CPUs and versions compiled to utilize advanced instruction sets"
         ]
     },
     "snappy": {
