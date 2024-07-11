@@ -36,7 +36,7 @@ if (
   metricMap.hasOwnProperty("Architectural CPI") &&
   m.value / metricMap["Architectural CPI"] > 0.4
 ) {
-  m.notes = "A large portion of instructions being fetched never get executed. Look for branchy code or binary layout issues";
+  m.notes = "A large portion of instructions being fetched never get executed. Look at other metrics for speculation bottlenecks";
 }
 ...
 ```

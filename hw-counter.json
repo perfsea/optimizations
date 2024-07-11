@@ -1,14 +1,14 @@
 {
     "ARM": {
         "N1": {
-            "Microarchitectural": "l1d_cache_refill,l1d_cache,l1i_cache_refill,l1i_cache,l2d_cache_refill,l2d_cache,l1d_tlb_refill,l1d_tlb,l1i_tlb_refill,l1i_tlb,l2d_tlb_refill,l2d_tlb,inst_retired,inst_spec,stall_frontend,stall_backend,cpu_cycles,br_mis_pred_retired,br_retired",
-            "Instruction Mix": "br_immed_spec,br_indirect_spec,inst_spec,crypto_spec,dp_spec,ld_spec,vfp_spec,ase_spec,st_spec"
+            "Microarchitectural": "cpu_cycles,inst_retired,inst_spec,br_mis_pred_retired,br_retired,l1d_cache_refill,l1d_cache,l1i_cache_refill,l1i_cache,l2d_cache_refill,l2d_cache,l1d_tlb_refill,l1d_tlb,l1i_tlb_refill,l1i_tlb,l2d_tlb_refill,l2d_tlb,stall_frontend,stall_backend",
+            "Instruction Mix": "inst_spec,ase_spec,st_spec,br_immed_spec,br_indirect_spec,crypto_spec,dp_spec,ld_spec,vfp_spec"
         },
         "N2 or later": {}
     },
     "AMD": {},
     "Intel": {
-        "Microarchitectural": "br_mis_pred,br_pred,l1d_cache,l1d_cache_refill,l2d_cache,l2d_cache_refill,l1d_tlb,l1d_tlb_refill,l2d_tlb,l2d_tlb_refill,l1i_cache,l1i_cache_refill,l1i_tlb,l1i_tlb_refill,instructions,cycles,stall_backend,stall_frontend",
-        "Instruction Mix": "br_immed_spec,br_indirect_spec,inst_spec,crypto_spec,dp_spec,ld_spec,vfp_spec,ase_spec,st_spec"
+        "Microarchitectural": "cpu_cycles,inst_retired,inst_spec,br_mis_pred_retired,br_retired,l1d_cache_refill,l1d_cache,l1i_cache_refill,l1i_cache,l2d_cache_refill,l2d_cache,l1d_tlb_refill,l1d_tlb,l1i_tlb_refill,l1i_tlb,l2d_tlb_refill,l2d_tlb,stall_frontend,stall_backend",
+        "Instruction Mix": "inst_spec,ase_spec,st_spec,br_immed_spec,br_indirect_spec,crypto_spec,dp_spec,ld_spec,vfp_spec"
     }
 }
