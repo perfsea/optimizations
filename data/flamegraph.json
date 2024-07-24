@@ -1,6 +1,7 @@
 {
     "ssl": {
         "name": "SSL/TLS",
+        "link": "openssl",
         "opt": [
                 "openssl 1.1.1 is one of the more performant versions",
                 "If not using certain functionality boringssl can give better performance",
