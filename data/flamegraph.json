@@ -30,6 +30,29 @@
                 "Try using a modern execution engine like velox"
         ]
     },
+    "\/org\/apache\/cassandra": {
+        "name": "Cassandra",
+        "link": "cassandra",
+        "opt": [
+                "Premium optimizations"
+        ]
+    },
+    "mongo": {
+        "name": "Mongodb",
+        "link": "mongodb",
+        "opt": [
+                "Verify that your indexes are being used with profile()",
+                "Upgrade to v8 for performance"
+        ]
+    },
+    "nginx": {
+        "name": "nginx",
+        "link": "nginx",
+        "opt": [
+                "Ensure you are using an optimized SSL/TLS",
+                "See server health check section for network tunables"
+        ]
+    },
     "java": {
         "name": "Java",
         "link": "openjdk",
@@ -41,13 +64,13 @@
     "envoy": {
         "name": "Envoy",
         "opt": [
-                "placeholder"
+                "Premium optimizations"
         ]
     },
     "kafka": {
         "name": "Kafka",
         "opt": [
-                "placeholder"
+                "Premium optimizations"
         ]
     },
     "tensorflow": {
