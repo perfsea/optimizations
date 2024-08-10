@@ -10,6 +10,9 @@
   },
   "libc": {
     "name": "glibc standard c library",
+    "tags": {
+      "NEON": "added in glibc-2.18"
+    },
     "link": "glibc",
     "opt": [
       "You could be doing unecessary data copying. Pass data by reference when possible to prevent copies",
@@ -88,7 +91,7 @@
   "snappy": {
     "name": "Snappy",
     "tags": {
-      "NEON": "Snappy 1.1.10"
+      "NEON": "added in Snappy version 1.1.10"
     },
     "opt": [
       "Snappy is more performant when compiled with clang instead of GCC",
