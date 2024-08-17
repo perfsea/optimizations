@@ -200,7 +200,7 @@
   "tensorflow": {
     "name": "TensorFlow",
     "tags": {
-      "AVX-512 VNNI": "v2.14.0",
+      "AVX-512": "v2.14.0",
       "AMX": "v2.14.0"
     },
     "opt": [
@@ -210,7 +210,7 @@
   "pytorch": {
     "name": "PyTorch",
     "tags": {
-      "AVX-512 VNNI": "2.1.0",
+      "AVX-512": "2.1.0",
       "AMX": "2.1.0"
     },
     "opt": [
