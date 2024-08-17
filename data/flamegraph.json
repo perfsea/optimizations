@@ -67,7 +67,7 @@
   "linpack": {
     "name": "LINPACK",
     "tags": {
-      "AVX512": "",
+      "AVX-512": "",
       "QAT": "v7.9+"
     },
     "opt": [
@@ -97,7 +97,7 @@
     "name": "Java",
     "link": "openjdk",
     "tags": {
-      "AVX512": "math, checksum & crypto in v11+\nvector api in v16+\narray copy in v17+"
+      "AVX-512": "math, checksum & crypto in v11+\nvector api in v16+\narray copy in v17+"
     },
     "opt": [
       "openjdk 16+ has the vector api which enables more use of the SIMD api.",
@@ -107,7 +107,7 @@
   "ffmpeg": {
     "name": "ffmpeg",
     "tags": {
-      "AVX512": ""
+      "AVX-512": ""
     },
     "opt": [
       "Intel® Video Transcode Acceleration Library can offer high performance and low bandwidth video transcoding"
