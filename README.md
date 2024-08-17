@@ -1,8 +1,6 @@
 <p align="center">
-<img  src="https://perfsea.com/favicon.svg" width="25%" />
+<img  src="https://github.com/user-attachments/assets/f5d47c05-69ce-4d74-b84e-c203ba3b8da4" width="25%" />
 </p>
-
-
 
 # [Perf Sea](https://perfsea.com/) open source optimizations
 Perf Sea avidly supports industry wide collaboration and in performance engineering we are all on the same team. Most of our optimizations remain in open source for the benefit of everyone. PR's must match our format.
