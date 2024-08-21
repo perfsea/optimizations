@@ -18,9 +18,7 @@
       "AES-NI": "2.73.3",
       "AVX-512": "2.73.3"
     },
-    "opt": [
-      ""
-    ]
+    "opt": []
   },
   "libc": {
     "name": "glibc standard c library",
@@ -40,19 +38,15 @@
       "Redis 6 added threads for IO which can offload some work from the otherwise single threaded tool."
     ]
   },
-  "\/org\/apache\/spark": {
+  "/org/apache/spark": {
     "name": "Spark",
     "link": "spark",
-    "opt": [
-      "Try using a modern execution engine like velox"
-    ]
+    "opt": ["Try using a modern execution engine like velox"]
   },
-  "\/org\/apache\/cassandra": {
+  "/org/apache/cassandra": {
     "name": "Cassandra",
     "link": "cassandra",
-    "opt": [
-      "Premium optimizations"
-    ]
+    "opt": []
   },
   "rocksdb": {
     "name": "RocksDB",
@@ -60,9 +54,7 @@
       "IAA": "v8.5+",
       "QAT": "v7.9+"
     },
-    "opt": [
-      "Premium optimizations"
-    ]
+    "opt": []
   },
   "linpack": {
     "name": "LINPACK",
@@ -70,9 +62,7 @@
       "AVX-512": "",
       "QAT": "v7.9+"
     },
-    "opt": [
-      "Premium optimizations"
-    ]
+    "opt": []
   },
   "mongo": {
     "name": "Mongodb",
@@ -118,18 +108,14 @@
     "tags": {
       "AVX-512": "scikit-learn: v1.1.1\nscikit-learn-intelex: v2023.1.1"
     },
-    "opt": [
-      ""
-    ]
+    "opt": []
   },
   "xgboost": {
     "name": "XGBoost",
     "tags": {
       "AVX-512": "v1.6.1+"
     },
-    "opt": [
-      ""
-    ]
+    "opt": []
   },
   "envoy": {
     "name": "Envoy",
@@ -138,9 +124,7 @@
       "AVX-512": "v1.14+",
       "DLB": "Istio: v1.13.4\nCalico: v3.21.4"
     },
-    "opt": [
-      "Premium optimizations"
-    ]
+    "opt": []
   },
   "OpenVINO": {
     "name": "OpenVINO",
@@ -148,54 +132,42 @@
       "AMX": "",
       "AVX-512": ""
     },
-    "opt": [
-      "Premium optimizations"
-    ]
+    "opt": []
   },
   "Calico": {
     "name": "Calico",
     "tags": {
       "DSA": ""
     },
-    "opt": [
-      "Premium optimizations"
-    ]
+    "opt": []
   },
   "zlib-chromium": {
     "name": "zlib-chromium",
     "tags": {
       "AVX-512": ""
     },
-    "opt": [
-      "Premium optimizations"
-    ]
+    "opt": []
   },
   "clickhouse": {
     "name": "ClickHouse",
     "tags": {
       "IAA": "23.2.4.12"
     },
-    "opt": [
-      "Premium optimizations"
-    ]
+    "opt": []
   },
   "NAMD3": {
     "name": "NAMD3",
     "tags": {
       "AVX-512": "23.2.4.12"
     },
-    "opt": [
-      "Premium optimizations"
-    ]
+    "opt": []
   },
   "kafka": {
     "name": "Kafka",
     "tags": {
       "AES-NI": "Zookeeper: v3.7.0\nKAFKA: v3.2"
     },
-    "opt": [
-      "Premium optimizations"
-    ]
+    "opt": []
   },
   "tensorflow": {
     "name": "TensorFlow",
@@ -222,27 +194,21 @@
     "tags": {
       "AVX-512": "v8+"
     },
-    "opt": [
-      ""
-    ]
+    "opt": []
   },
   "LAMMPS": {
     "name": "LAMMPS",
     "tags": {
       "AVX-512": "v28Mar2023+"
     },
-    "opt": [
-      ""
-    ]
+    "opt": []
   },
   "Wordpress": {
     "name": "Wordpress",
     "tags": {
       "AVX-512": "v5.9.3+"
     },
-    "opt": [
-      ""
-    ]
+    "opt": []
   },
   "(deflate|inflate)": {
     "name": "Deflate/Inflate compression",
@@ -269,9 +235,7 @@
   },
   "prometheus": {
     "name": "Prometheus",
-    "opt": [
-      "Try reducing the scrape_interval to limit overhead"
-    ]
+    "opt": ["Try reducing the scrape_interval to limit overhead"]
   },
   "alloc": {
     "name": "Allocators",
@@ -281,9 +245,7 @@
   },
   " GC ": {
     "name": "Garbage Collection",
-    "opt": [
-      "Using parallel garbage collection reduces overhead"
-    ]
+    "opt": ["Using parallel garbage collection reduces overhead"]
   },
   "swapper": {
     "name": "swapper",
