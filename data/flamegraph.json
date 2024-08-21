@@ -5,117 +5,84 @@
     "tags": {
       "AVX-512": "added in glibc-2.18",
       "AES-NI": "v1.1.1w"
-    },
-    "opt": [
-      "openssl 1.1.1 is one of the more performant versions",
-      "If not using certain functionality boringssl can give better performance",
-      "modern CPU architectures have more SIMD (single instruction multiple data) execution units and can often execute the cryptographic parts of networking much faster"
-    ]
+    }
   },
   "bouncy castle": {
     "name": "Bouncy Castle",
     "tags": {
       "AES-NI": "2.73.3",
       "AVX-512": "2.73.3"
-    },
-    "opt": []
+    }
   },
   "libc": {
     "name": "glibc standard c library",
     "tags": {
       "NEON": "added in glibc-2.18"
     },
-    "link": "glibc",
-    "opt": [
-      "You could be doing unecessary data copying. Pass data by reference when possible to prevent copies",
-      "You could have lots of syscalls. Try batching any syscalls or look for optimized IO options like XDP (express data path) or io_uring for networking. Also some reads and writes can be batched."
-    ]
+    "link": "glibc"
   },
   "redis-server": {
     "name": "Redis",
-    "link": "redis",
-    "opt": [
-      "Redis 6 added threads for IO which can offload some work from the otherwise single threaded tool."
-    ]
+    "link": "redis"
   },
   "/org/apache/spark": {
     "name": "Spark",
-    "link": "spark",
-    "opt": ["Try using a modern execution engine like velox"]
+    "link": "spark"
   },
   "/org/apache/cassandra": {
     "name": "Cassandra",
-    "link": "cassandra",
-    "opt": []
+    "link": "cassandra"
   },
   "rocksdb": {
     "name": "RocksDB",
     "tags": {
       "IAA": "v8.5+",
       "QAT": "v7.9+"
-    },
-    "opt": []
+    }
   },
   "linpack": {
     "name": "LINPACK",
     "tags": {
       "AVX-512": "",
       "QAT": "v7.9+"
-    },
-    "opt": []
+    }
   },
   "mongo": {
     "name": "Mongodb",
-    "link": "mongodb",
-    "opt": [
-      "Verify that your indexes are being used with profile()",
-      "Upgrade to v8 for performance"
-    ]
+    "link": "mongodb"
   },
   "nginx": {
     "name": "nginx",
     "link": "nginx",
     "tags": {
       "QAT": "TLS v1.3 optimizations"
-    },
-    "opt": [
-      "Ensure you are using an optimized SSL/TLS",
-      "See server health check section for network tunables"
-    ]
+    }
   },
   "java": {
     "name": "Java",
     "link": "openjdk",
     "tags": {
       "AVX-512": "math, checksum & crypto in v11+\nvector api in v16+\narray copy in v17+"
-    },
-    "opt": [
-      "openjdk 16+ has the vector api which enables more use of the SIMD api.",
-      "Some of corretto's compression libraries are faster than openjdk's"
-    ]
+    }
   },
   "ffmpeg": {
     "name": "ffmpeg",
     "tags": {
       "AVX-512": ""
     },
-    "opt": [
-      "Intel® Video Transcode Acceleration Library can offer high performance and low bandwidth video transcoding"
-    ]
+    "link": "ffmpeg"
   },
   "scikit": {
     "name": "scikit",
     "tags": {
       "AVX-512": "scikit-learn: v1.1.1\nscikit-learn-intelex: v2023.1.1"
-    },
-    "opt": []
+    }
   },
   "xgboost": {
     "name": "XGBoost",
     "tags": {
       "AVX-512": "v1.6.1+"
-    },
-    "opt": []
+    }
   },
   "envoy": {
     "name": "Envoy",
@@ -123,51 +90,44 @@
       "QAT": "v1.17+",
       "AVX-512": "v1.14+",
       "DLB": "Istio: v1.13.4\nCalico: v3.21.4"
-    },
-    "opt": []
+    }
   },
   "OpenVINO": {
     "name": "OpenVINO",
     "tags": {
       "AMX": "",
       "AVX-512": ""
-    },
-    "opt": []
+    }
   },
   "Calico": {
     "name": "Calico",
     "tags": {
       "DSA": ""
-    },
-    "opt": []
+    }
   },
   "zlib-chromium": {
     "name": "zlib-chromium",
     "tags": {
       "AVX-512": ""
-    },
-    "opt": []
+    }
   },
   "clickhouse": {
     "name": "ClickHouse",
     "tags": {
       "IAA": "23.2.4.12"
-    },
-    "opt": []
+    }
   },
   "NAMD3": {
     "name": "NAMD3",
     "tags": {
       "AVX-512": "23.2.4.12"
-    },
-    "opt": []
+    }
   },
   "kafka": {
     "name": "Kafka",
     "tags": {
       "AES-NI": "Zookeeper: v3.7.0\nKAFKA: v3.2"
-    },
-    "opt": []
+    }
   },
   "tensorflow": {
     "name": "TensorFlow",
@@ -175,9 +135,7 @@
       "AVX-512": "v2.14.0",
       "AMX": "v2.14.0"
     },
-    "opt": [
-      "Try quantizing your weights to better utilize underlying CPU execution units. Some companies offer tools for converting your models like Intel's neural compressor and oneDNN"
-    ]
+    "link": "tensorflow"
   },
   "pytorch": {
     "name": "PyTorch",
@@ -185,30 +143,25 @@
       "AVX-512": "2.1.0",
       "AMX": "2.1.0"
     },
-    "opt": [
-      "Try quantizing your weights to better utilize underlying CPU execution units. Some companies offer tools for converting your models like Intel's neural compressor and oneDNN"
-    ]
+    "link": "pytorch"
   },
   "OpenFOAM": {
     "name": "OpenFOAM",
     "tags": {
       "AVX-512": "v8+"
-    },
-    "opt": []
+    }
   },
   "LAMMPS": {
     "name": "LAMMPS",
     "tags": {
       "AVX-512": "v28Mar2023+"
-    },
-    "opt": []
+    }
   },
   "Wordpress": {
     "name": "Wordpress",
     "tags": {
       "AVX-512": "v5.9.3+"
-    },
-    "opt": []
+    }
   },
   "(deflate|inflate)": {
     "name": "Deflate/Inflate compression",
@@ -221,36 +174,26 @@
     "tags": {
       "NEON": "added in Snappy version 1.1.10"
     },
-    "opt": [
-      "Snappy is more performant when compiled with clang instead of GCC",
-      "Optimized to use SIMD instructions on modern CPU architectures, try upgrading to a newer CPU"
-    ]
+    "link": "snappy"
   },
   "zstd": {
     "name": "Z Standard",
-    "opt": [
-      "Can be offloaded with Intel's QAT which is on Sapphire rapids or later architectures",
-      "Optimized to use SIMD instructions on modern CPU architectures, try upgrading to a newer CPU"
-    ]
+    "link": "zstd"
   },
   "prometheus": {
     "name": "Prometheus",
-    "opt": ["Try reducing the scrape_interval to limit overhead"]
+    "link": "prometheus"
   },
   "alloc": {
     "name": "Allocators",
-    "opt": [
-      "TCmalloc can be used to improve performance on multithreaded allocation workloads by maintaining a per-cpu cache and zoning to prevent fragmentation"
-    ]
+    "link": "allocators"
   },
   " GC ": {
     "name": "Garbage Collection",
-    "opt": ["Using parallel garbage collection reduces overhead"]
+    "link": "gc"
   },
   "swapper": {
     "name": "swapper",
-    "opt": [
-      "server is either under utilized or idling on IO. Either downsize or add more work"
-    ]
+    "link": "swapper"
   }
 }
