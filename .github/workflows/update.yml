@@ -16,8 +16,9 @@ jobs:
         run: |
           for filename in data/* data/**/*
           do
-            echo $filename
-            aws s3api put-object --endpoint-url https://52ea1a31689ef9942785e9fe708b27a0.r2.cloudflarestorage.com  --bucket data --key ${filename} --body ${filename}
+            if [ "$filename" != "data/reports" ]; then
+              aws s3api put-object --endpoint-url https://52ea1a31689ef9942785e9fe708b27a0.r2.cloudflarestorage.com  --bucket data --key ${filename} --body ${filename}
+            fi
           done
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
