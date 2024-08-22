@@ -1,2 +1,7 @@
-Can be offloaded with Intel's QAT which is on Sapphire rapids or later architectures
-Optimized to use SIMD instructions on modern CPU architectures, try upgrading to a newer CPU
+## What is it?
+
+swapper is what runs on an idle cpu
+
+## What should I do?
+
+try downsizing your cluster so your VM's are not underutilized
