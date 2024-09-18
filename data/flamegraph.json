@@ -194,7 +194,8 @@
   },
   "alloc": {
     "name": "Allocators",
-    "link": "allocators"
+    "link": "allocators",
+    "note": "try using a high performance allocator library like tcmalloc or jemalloc"
   },
   " GC ": {
     "name": "Garbage Collection",
