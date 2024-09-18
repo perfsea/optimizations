@@ -3,22 +3,24 @@
 </p>
 
 # [Perf Sea](https://perfsea.com/) open source optimizations
-Perf Sea avidly supports industry wide collaboration and in performance engineering we are all on the same team. Most of our optimizations remain in open source for the benefit of everyone. PR's must match our format.
+
+Perf Sea avidly supports industry wide collaboration and in performance engineering we are all on the same team. Most of our optimizations remain in open source for the benefit of everyone.
 
 ## Flamegraph
+
 ```json
-{
-  "regex matching related symbols": {
-        "name": "Name of functionality",
-        "opt": [
-                "List of key optimizations that apply"
-        ]
-    },
+"ConcurrentFailedRuleFactory_TEXT_WARN": {
+      "name": "Garbage Collector Concurrent Mode Failure",
+      "link": "GarbageCollectionJava.md",
+      "note": "Garbage Collection hasn't been able to keep up with the Java Program. Try lowering the value of [XX:InitiatingHeapOccupancePercent]"
+  },
 ...
 ```
 
 ## HW Counter
+
 Define metrics derived from multiple raw hardware events with javascript.
+
 ```js
 {
   metric: "Speculative CPI",
@@ -28,6 +30,7 @@ Define metrics derived from multiple raw hardware events with javascript.
 ```
 
 Express complex relationships between counter metrics with javascript.
+
 ```js
 if (
   "Speculative CPI" == m.metric &&
@@ -40,7 +43,9 @@ if (
 ```
 
 ## System Configuration
+
 Flag problematic system configurations by associating regex with common commands.
+
 ```json
 [
   {

@@ -2,6 +2,7 @@
   "ssl": {
     "name": "SSL/TLS",
     "link": "openssl",
+    "note": "network encryption. modern cpus and version 1.1.1 are especially performant",
     "tags": {
       "AVX-512": "added in glibc-2.18",
       "AES-NI": "v1.1.1w"
@@ -23,7 +24,12 @@
   },
   "redis-server": {
     "name": "Redis",
-    "link": "redis"
+    "link": "redis",
+    "note": "use IO threads to offload from the main thread"
+  },
+  "ConcurrentFailedRuleFactory": {
+    "name": "ConcurrentFailedRuleFactory",
+    "note": "Concurrent mode failures mean the Garbage Collector hasn't been able to keep up with the Java Program. Try lowering the value of [XX:InitiatingHeapOccupancyPercent]"
   },
   "/org/apache/spark": {
     "name": "Spark",
@@ -49,7 +55,8 @@
   },
   "mongo": {
     "name": "Mongodb",
-    "link": "mongodb"
+    "link": "mongodb",
+    "note": "Use MongoDB 8.0 for enhanced performance"
   },
   "nginx": {
     "name": "nginx",
@@ -165,7 +172,7 @@
   },
   "(deflate|inflate)": {
     "name": "Deflate/Inflate compression",
-    "opt": [
+    "note": [
       "most compression benefits from newer CPUs and versions compiled to utilize advanced instruction sets"
     ]
   },
@@ -174,7 +181,8 @@
     "tags": {
       "NEON": "added in Snappy version 1.1.10"
     },
-    "link": "snappy"
+    "link": "snappy",
+    "note": "Snappy compiles better with clang than GCC"
   },
   "zstd": {
     "name": "Z Standard",
@@ -194,6 +202,7 @@
   },
   "swapper": {
     "name": "swapper",
-    "link": "swapper"
+    "link": "swapper",
+    "note": "try shrinking your VM size to save costs and reduce idle CPU"
   }
 }
