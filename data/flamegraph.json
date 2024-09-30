@@ -194,11 +194,31 @@
   },
   "el0_svc": {
     "name": "Kernel",
-    "note": "This is all the cpu cycles your code is spending in kernel space. The overhead of elevating privilages from userspace to kernel should be avoided when possible."
+    "note": "This is all the cpu cycles your code is spending in kernel space. The overhead of elevating privileges from userspace to kernel should be avoided when possible."
   },
   "futex": {
     "name": "Futex usage",
     "note": "Your code uses futexes, you should collect an offcpu flamegraph to determine which ones are the most condended and waited on."
+  },
+  "tcp_": {
+    "name": "TCP usage",
+    "note": "You are traversing the TCP networking stack."
+  },
+  "xfs_": {
+    "name": "XFS usage",
+    "note": "a journaling file system for Linux that's designed with B+ trees for high performance and scalability"
+  },
+  "_irq": {
+    "name": "IRQ overhead",
+    "note": "Time spent suspended dealing with hardware interrupts"
+  },
+  "aes": {
+    "name": "AES (Advanced Encryption Standard)",
+    "note": "symmetric key encryption and decryption"
+  },
+  "ghash": {
+    "name": "GHASH",
+    "note": "message authentication code"
   },
   "alloc": {
     "name": "Allocators",
