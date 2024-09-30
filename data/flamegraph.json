@@ -192,6 +192,14 @@
     "name": "Prometheus",
     "link": "prometheus"
   },
+  "el0_svc": {
+    "name": "Kernel",
+    "note": "This is all the cpu cycles your code is spending in kernel space. The overhead of elevating privilages from userspace to kernel should be avoided when possible."
+  },
+  "futex": {
+    "name": "Futex usage",
+    "note": "Your code uses futexes, you should collect an offcpu flamegraph to determine which ones are the most condended and waited on."
+  },
   "alloc": {
     "name": "Allocators",
     "link": "allocators",
