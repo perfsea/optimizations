@@ -35,14 +35,14 @@ resource "aws_vpc_security_group_egress_rule" "allow_all_traffic_ipv6" {
 }
 
 resource "aws_instance" "redis_server" {
-  ami                    = "ami-0265620b57cb06f42"
+  ami                    = "ami-066a7fbea5161f451"
   instance_type          = "t2.micro"
   key_name               = "terraform_ec2_key"
   vpc_security_group_ids = [aws_security_group.allow_tls.id]
 }
 
 resource "aws_instance" "redis_client" {
-  ami                    = "ami-0265620b57cb06f42"
+  ami                    = "ami-066a7fbea5161f451"
   instance_type          = "t2.micro"
   key_name               = "terraform_ec2_key"
   vpc_security_group_ids = [aws_security_group.allow_tls.id]
