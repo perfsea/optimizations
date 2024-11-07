@@ -2,3 +2,6 @@
 **/.terraform/*
 *.tfstate*
 .terraform.*
+
+# ci
+terraform_ec2_key*
