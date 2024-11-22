@@ -14,4 +14,5 @@ ssh -i "terraform_ec2_key" -o "StrictHostKeyChecking no" ec2-user@$redis_server_
 ssh -i "terraform_ec2_key" -o "StrictHostKeyChecking no" ubuntu@$redis_client_ip 'bash' < setup_workload.sh
 ssh -i "terraform_ec2_key" -o "StrictHostKeyChecking no" ubuntu@$redis_client_ip 'bash' < run_benchmark.sh
 ssh -i "terraform_ec2_key" -o "StrictHostKeyChecking no" ubuntu@$redis_client_ip "memtier_benchmark -s $redis_server_ip_private"
-# terraform destroy -auto-approve
+
+terraform destroy -auto-approve
