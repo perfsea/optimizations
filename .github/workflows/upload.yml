@@ -6,7 +6,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    name: Deploy
+    name: Upload
     steps:
       - uses: actions/checkout@v4
       - name: Upload

@@ -12,6 +12,18 @@ resource "aws_security_group" "allow_tls" {
   tags = {
     Name = "allow_tls"
   }
+  egress {
+    from_port = 0
+    to_port   = 0
+    protocol  = "-1"
+    self      = true
+  }
+  ingress {
+    from_port = 0
+    to_port   = 0
+    protocol  = "-1"
+    self      = true
+  }
 }
 
 resource "aws_vpc_security_group_ingress_rule" "allow_tls_ipv4" {
@@ -35,14 +47,14 @@ resource "aws_vpc_security_group_egress_rule" "allow_all_traffic_ipv6" {
 }
 
 resource "aws_instance" "redis_server" {
-  ami                    = "ami-066a7fbea5161f451"
+  ami                    = "ami-046b5b8111c19b3ac"
   instance_type          = "t2.micro"
   key_name               = "terraform_ec2_key"
   vpc_security_group_ids = [aws_security_group.allow_tls.id]
 }
 
 resource "aws_instance" "redis_client" {
-  ami                    = "ami-066a7fbea5161f451"
+  ami                    = "ami-0b8c6b923777519db"
   instance_type          = "t2.micro"
   key_name               = "terraform_ec2_key"
   vpc_security_group_ids = [aws_security_group.allow_tls.id]
@@ -56,6 +68,11 @@ resource "aws_key_pair" "terraform_ec2_key" {
 output "redis_server_ip" {
   description = "Redis server public IP"
   value       = aws_instance.redis_server.public_ip
+}
+
+output "redis_server_ip_private" {
+  description = "Redis server public IP"
+  value       = aws_instance.redis_server.private_ip
 }
 
 output "redis_client_ip" {
