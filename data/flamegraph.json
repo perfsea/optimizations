@@ -229,6 +229,9 @@
     "name": "Garbage Collection",
     "link": "gc"
   },
+  "runtime.gc": {
+    "name": "Golang garbage collection"
+  },
   "swapper": {
     "name": "swapper",
     "link": "swapper",
