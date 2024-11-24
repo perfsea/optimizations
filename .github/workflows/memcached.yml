@@ -1,4 +1,4 @@
-name: benchmark redis
+name: benchmark memcached
 
 on:
   workflow_dispatch:
@@ -12,7 +12,7 @@ jobs:
       - name: Upload to S3
         run: |
           cd benchmarks
-          bash run.sh setup_redis.sh
+          bash run.sh setup_memcached.sh "-p 11211 -P memcache_text"
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}

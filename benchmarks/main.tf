@@ -46,14 +46,14 @@ resource "aws_vpc_security_group_egress_rule" "allow_all_traffic_ipv6" {
   ip_protocol       = "-1" # semantically equivalent to all ports
 }
 
-resource "aws_instance" "redis_server" {
+resource "aws_instance" "server" {
   ami                    = "ami-046b5b8111c19b3ac"
   instance_type          = "t2.micro"
   key_name               = "terraform_ec2_key"
   vpc_security_group_ids = [aws_security_group.allow_tls.id]
 }
 
-resource "aws_instance" "redis_client" {
+resource "aws_instance" "client" {
   ami                    = "ami-0b8c6b923777519db"
   instance_type          = "t2.micro"
   key_name               = "terraform_ec2_key"
@@ -65,17 +65,17 @@ resource "aws_key_pair" "terraform_ec2_key" {
   public_key = file("terraform_ec2_key.pub")
 }
 
-output "redis_server_ip" {
-  description = "Redis server public IP"
-  value       = aws_instance.redis_server.public_ip
+output "server_ip" {
+  description = "server public IP"
+  value       = aws_instance.server.public_ip
 }
 
-output "redis_server_ip_private" {
-  description = "Redis server public IP"
-  value       = aws_instance.redis_server.private_ip
+output "server_ip_private" {
+  description = "server public IP"
+  value       = aws_instance.server.private_ip
 }
 
-output "redis_client_ip" {
-  description = "Redis server public IP"
-  value       = aws_instance.redis_client.public_ip
+output "client_ip" {
+  description = "server public IP"
+  value       = aws_instance.client.public_ip
 }
