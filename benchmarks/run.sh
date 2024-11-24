@@ -14,4 +14,4 @@ ssh -i "terraform_ec2_key" -o "StrictHostKeyChecking no" ec2-user@$server_ip 'ba
 ssh -i "terraform_ec2_key" -o "StrictHostKeyChecking no" ubuntu@$client_ip 'bash' < setup_memtier.sh
 ssh -i "terraform_ec2_key" -o "StrictHostKeyChecking no" ubuntu@$client_ip "memtier_benchmark -s $server_ip_private --key-maximum=10000 $2"
 
-# terraform destroy -auto-approve
+terraform destroy -auto-approve
