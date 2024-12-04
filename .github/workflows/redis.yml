@@ -17,3 +17,11 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_DEFAULT_REGION: "us-west-2"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: profile.col
+          path: profile.col
+      - uses: actions/upload-artifact@v4
+        with:
+          name: profile_iostat.txt
+          path: profile_iostat.txt
