@@ -22,7 +22,7 @@
     },
     "link": "glibc"
   },
-  "redis-server": {
+  "redis": {
     "name": "Redis",
     "link": "redis",
     "note": "use IO threads to offload from the main thread"
