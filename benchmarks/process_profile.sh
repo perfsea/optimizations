@@ -1,4 +1,4 @@
-sudo pkill perf
+sudo pkill -SIGINT perf
 sudo pkill iostat
 sudo perf script > out.perf &
 pidwait perf
