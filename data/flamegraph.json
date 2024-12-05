@@ -208,6 +208,14 @@
     "name": "XFS usage",
     "note": "a journaling file system for Linux that's designed with B+ trees for high performance and scalability"
   },
+  "do_syscall_64": {
+    "name": "System Calls",
+    "note": "Time spent requesting a service from the operating system. Try to limit as copying data from user to kernel-space can be expensive"
+  },
+  "_xmit": {
+    "name": "Sending network data (xmit)",
+    "note": "Time spend transmitting data through the network"
+  },
   "_irq": {
     "name": "IRQ overhead",
     "note": "Time spent suspended dealing with hardware interrupts"
