@@ -9,7 +9,7 @@ jobs:
     name: benchmark
     steps:
       - uses: actions/checkout@v4
-      - name: Upload to S3
+      - name: Run
         run: |
           cd benchmarks
           bash run.sh setup_redis.sh
@@ -20,8 +20,8 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: profile.col
-          path: profile.col
+          path: benchmarks/profile.col
       - uses: actions/upload-artifact@v4
         with:
           name: profile_iostat.txt
-          path: profile_iostat.txt
+          path: benchmarks/profile_iostat.txt
