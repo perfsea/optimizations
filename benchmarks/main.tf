@@ -47,8 +47,8 @@ resource "aws_vpc_security_group_egress_rule" "allow_all_traffic_ipv6" {
 }
 
 resource "aws_instance" "server" {
-  ami                    = "ami-046b5b8111c19b3ac"
-  instance_type          = "t2.micro"
+  ami                    = "ami-01167b661200e49e7"
+  instance_type          = "m8g.large"
   key_name               = "terraform_ec2_key"
   vpc_security_group_ids = [aws_security_group.allow_tls.id]
 }

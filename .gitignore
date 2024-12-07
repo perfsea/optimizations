@@ -5,3 +5,5 @@
 
 # ci
 terraform_ec2_key*
+benchmarks/profile_*
+benchmarks/profile.col

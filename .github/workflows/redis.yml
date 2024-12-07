@@ -25,3 +25,7 @@ jobs:
         with:
           name: profile_iostat.txt
           path: benchmarks/profile_iostat.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: profile_counters.csv
+          path: benchmarks/profile_counters.csv
